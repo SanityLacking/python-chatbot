@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+<h1>Python ChatBot</h1>
+
+<!-- The display section of the chatbot content, you can make the python values output by using they syntax below  see: https://stackoverflow.com/questions/11178426/how-can-i-pass-data-from-flask-to-javascript-in-a-template -->
+<div class="form-group">
+        <label for="output">Chatbot:</label>
+        <textarea class="form-control" rows="5" id="outputText" style="width: 300px;">{{output}}</textarea>
+    </div>
+    
+<!-- The input section for user input, we use get to make a request back to the server with what the user has written. see: https://stackoverflow.com/questions/24292766/how-to-process-get-query-string-with-flask -->
+<form action="/input" id="inputForm" method="get">
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="text" rows="5" id="inputText" name="userInput" style="width: 300px;"></textarea>
+        <button type="submit" class="btn">Basic</button>
+    </div>
+    
+</form>
+
+
+</body>
+</html>
