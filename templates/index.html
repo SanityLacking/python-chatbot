@@ -1,29 +1,103 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/static/style.css">
-</head>
-<body>
+</body>
+</html>
 
-<h1>Python ChatBot</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Griffith Chatbot</title>
+
+    <!-- Bootstrap core CSS -->
+
+     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <!-- Custom styles for this template -->
+    <link href="/static/css/1-col-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Griffith Chatbot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <!--<ul class="navbar-nav ml-auto">-->
+          <!--  <li class="nav-item active">-->
+          <!--    <a class="nav-link" href="#">Home-->
+          <!--      <span class="sr-only">(current)</span>-->
+          <!--    </a>-->
+          <!--  </li>-->
+          <!--  <li class="nav-item">-->
+          <!--    <a class="nav-link" href="#">About</a>-->
+          <!--  </li>-->
+          <!--  <li class="nav-item">-->
+          <!--    <a class="nav-link" href="#">Services</a>-->
+          <!--  </li>-->
+          <!--  <li class="nav-item">-->
+          <!--    <a class="nav-link" href="#">Contact</a>-->
+          <!--  </li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      
+      <!-- Project One -->
+      <div class="column">
+        <h1>Ask Eduhouse</h1>
+        <br>
 
 <!-- The display section of the chatbot content, you can make the python values output by using they syntax below  see: https://stackoverflow.com/questions/11178426/how-can-i-pass-data-from-flask-to-javascript-in-a-template -->
 <div class="form-group">
-        <label for="output">Chatbot:</label>
-        <textarea class="form-control" rows="5" id="outputText" style="width: 300px;">{{output}}</textarea>
+        <label for="output">Chatbot answer:</label><br>
+        <textarea class="form-control" rows="10" id="outputText" style="width: 300px;">{{output}}</textarea>
     </div>
     
 <!-- The input section for user input, we use get to make a request back to the server with what the user has written. see: https://stackoverflow.com/questions/24292766/how-to-process-get-query-string-with-flask -->
 <form action="/input" id="inputForm" method="get">
     <div class="form-group">
-        <label for="comment">Comment:</label>
-        <textarea class="text" rows="5" id="inputText" name="userInput" style="width: 300px;"></textarea>
-        <button type="submit" class="btn">Basic</button>
+        <label for="comment">Question:</label><br>
+        <textarea class="text" rows="3" id="inputText" name="userInput" style="width: 300px;"></textarea><br>
+        <button type="submit" class="btn" id="submitBtn" style="margin-top:30px;">Enter Text</button>
     </div>
     
 </form>
+      </div>
+      <!-- /.row -->
 
+     
+    </div>
+    <!-- /.container -->
 
-</body>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Griffith University 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/vendor/popper/popper.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
 </html>

@@ -7,16 +7,18 @@
     ----------------------------------------------------------------- 
 
 
-Welcome to your Python project on Cloud9 IDE!
+Python project for Chatbot. 
+Uses flask to manage web interaction and recieves user input and outputs results via get requests.
+Git repository is at https://github.com/SanityLacking/python-chatbot. 
+After changes that you want to save go to terminal and type in:
+    git commit -m "[save comment]"
+    git push
 
-To show what Cloud9 can do, we added a basic sample web application to this
-workspace, from the excellent Python tutorial _Learning Python the Hard Way_.
-We skipped ahead straight to example 50 which teaches how to build a web
-application.
+Chatbot is stored int he Eduhousechatbot folder and is called in the app.py file
+training is done on server start, this could be potentially changed to build a file and use that file in the future, but it serves for now.
 
-If you've never looked at the tutorial or are interested in learning Python,
-go check it out. It's a great hands-on way for learning all about programming
-in Python.
+
+
 
 * _Learning Python The Hard Way_, online version and videos: 
 http://learnpythonthehardway.org/book/
@@ -28,8 +30,8 @@ http://learnpythonthehardway.org/book/
 To try the example application, type the following in the terminal:
 
 ```
-cd ex50
-python bin/app.py
+
+python app.py
 ```
 
 Alternatively, open the file in ex50/bin and click the green Run
