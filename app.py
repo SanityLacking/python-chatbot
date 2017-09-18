@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 import json
-import Example.eduhouse_chatbot_M as griffithChatbot
+import Example.eduhouse_chatbot_KoreanQ_V2 as griffithChatbot
 app = Flask(__name__)
 
 griffithChatbot.train()
@@ -15,6 +15,7 @@ def output():
     inputList = list(all_args)
     #outputText = json.loads(outputJson)
     inputText = str(inputList[0][1])
+    #inputText = str(inputList[0][1])
     inputText = inputText.lower()
     print(inputText)
     chatbotOutput = griffithChatbot.search(inputText)

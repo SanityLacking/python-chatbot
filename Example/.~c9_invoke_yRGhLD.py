@@ -4,7 +4,7 @@ from translate import Translator
 from korean import Noun
 from Example.data_formatter import Data_Formatter
 
-formatter = Data_Formatter('Example/Eduhouse32.csv')
+formatter = Data_Formatter('Example/Eduhouse2.csv')
 
 responsek=' '
 # Create a new instance of a ChatBot
@@ -25,17 +25,11 @@ bot = ChatBot(
 )
 
 def train():
-      
+
       # Train the chat bot with a few responses
-      bot.train(formatter.get_training_array()[2])
-      arr = formatter.get_training_array()[2]
-      print(arr)
-      '''
-      for i in range(len(arr)-1):
-            if (i % 2 is 0):
-                  print('\n')
-            print(arr[i])
-      '''
+      bot.train(formatter.get_training_array()[1])
+      formatter.get_training_array()[1]
+
 #while True:
 # Get a response for some unexpected input
 #response = bot.get_response('How do I make an omelette?')
@@ -304,7 +298,7 @@ def search(entered_input):
       print(response2)
       print(responsek)
       print(response)
-      return(response2)
+      return(response)
 
 #response = bot.get_response(entered_input)
 #print(response)

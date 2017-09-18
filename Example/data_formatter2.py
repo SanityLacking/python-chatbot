@@ -23,13 +23,7 @@ class Data_Formatter:
         Loads the csv file and sets up data
     '''
     def __init__(self, file_location):
-        filename, fileextension = file_location.split('.')
-        if(fileextension == 'csv'):
-            self.df = pd.read_csv(file_location)
-        elif(fileextension == 'xls'):
-            self.df = pd.read_excel(file_location)
-        else:
-            print("Filetype " + fileextension + " is not recognised")
+        self.df = pd.read_csv(file_location)
         self.find_unique_answers()
         self.setup_objects()
 
@@ -111,20 +105,14 @@ class Data_Formatter:
     def get_training_array(self):
         q_k_arr = []
         q_e_arr = []
-        q_e_a_k = []
-        q_k_a_e = []
         for obj in self.qa_objects:
             for question in obj['QK']:
-                q_k_a_e.append(question)
-                q_k_a_e.append(obj['AE'])
                 q_k_arr.append(question)
                 q_k_arr.append(obj['AK'])
             for question in obj['QE']:
-                q_e_a_k.append(question)
-                q_e_a_k.append(obj['AK'])
                 q_e_arr.append(question)
-                q_e_arr.append(obj['AE'])
-        return q_e_arr, q_k_arr, q_e_a_k, q_k_a_e
+                q_e_arr.append(obj['AK'])
+        return q_e_arr, q_k_arr
 
     '''
         Searches for relevant keywords in entered input
@@ -139,6 +127,6 @@ class Data_Formatter:
 
 
 if __name__ == "__main__":
-    formatter = Data_Formatter("Eduhouse32.csv")
-    print(formatter.get_training_array()[2])
+    formatter = Data_Formatter("test_data.csv")
+    print(formatter.get_training_array()[1])
     #print(formatter.get_training_array())
